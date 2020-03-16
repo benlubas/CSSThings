@@ -1,0 +1,98 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  position: relative;
+  --width: 250px;
+  --height: calc(var(--width) * 1.2);
+  width: var(--width);
+  height: var(--height);
+  background: #f3f3f3;
+  display: inline-block;
+  -webkit-filter: drop-shadow(-20px -10px 25px grey);
+          filter: drop-shadow(-20px -10px 25px grey);
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  -webkit-transform: skewY(-5deg) translateY(-25px);
+          transform: skewY(-5deg) translateY(-25px);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background: #4d2673;
+  top: -25px;
+  left: 0px;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: calc(var(--height) * 0.5);
+  background: #4d2673;
+  top: 0px;
+  left: -25px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: skewY(45deg);
+          transform: skewY(45deg);
+  border-bottom: calc(var(--height) / 2) solid #dadada;
+}
+
+.card .header {
+  height: calc(0.5 * var(--height));
+  width: 100%;
+  background: rebeccapurple;
+  padding: 25px;
+}
+
+.card .header .title {
+  font-size: 3rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card .body .content {
+  display: inline-block;
+  padding: 10px 25px;
+  width: 100%;
+  height: calc(var(--height) / 2);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+}
+/*# sourceMappingURL=main.css.map */
